@@ -24,7 +24,7 @@ const {
   renderToString
 } = require('react-router-render')
 
-app.get('/', ({ url: { pathname = '/' } }, res) => res.send(renderToString(routes, pathname)))
+app.get('/', ({ url: { path: pathname = '/' } }, res) => res.send(renderToString(routes, pathname)))
 
 app.listen(port, () => console.log(`Express ${port}`))
 ```
