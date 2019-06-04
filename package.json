@@ -13,6 +13,15 @@
     "url": "git://github.com/sequencemedia/react-router-render.git"
   },
   "license": "MIT",
+  "keywords": [
+    "React",
+    "Router",
+    "React Router",
+    "isomorphic",
+    "render",
+    "renderToString",
+    "renderToStaticMarkup"
+  ],
   "scripts": {
     "build": "babel src -d lib",
     "build:watch": "babel src -d lib -w",
