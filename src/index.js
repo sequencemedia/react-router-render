@@ -1,8 +1,12 @@
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import Boom from '@hapi/boom'
-
 import { StaticRouter as Router } from 'react-router-dom'
+import debug from 'debug'
+
+const log = debug('@sequencemedia/react-redux-render')
+
+log('`react-redux-render` is awake')
 
 const badImplementation = (e, data) => Boom.boomify(e, { statusCode: 500, message: 'Rendering exception', data })
 const notFound = (data) => Boom.notFound('Routing exception', data)
@@ -15,6 +19,8 @@ const getReactDOMServerRenderToString = (routerProps, routes = {}) => {
       </Router>
     )
   } catch (e) {
+    log(e)
+
     throw badImplementation(e, routerProps)
   }
 }
@@ -27,6 +33,8 @@ const getReactDOMServerRenderToStaticMarkup = (routerProps, routes = {}) => {
       </Router>
     )
   } catch (e) {
+    log(e)
+
     throw badImplementation(e, routerProps)
   }
 }
