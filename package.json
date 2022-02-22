@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/react-router-render",
-  "version": "2.0.121",
+  "version": "2.0.122",
   "description": "Sync/async isomorphic render of React apps with React Router",
   "keywords": [
     "React",
@@ -44,7 +44,7 @@
     "debug": "^4.3.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.17.3",
+    "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-proposal-export-default-from": "^7.16.7",
