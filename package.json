@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/react-router-render",
-  "version": "2.0.152",
+  "version": "2.0.153",
   "description": "Sync/async isomorphic render of React apps with React Router",
   "keywords": [
     "React",
@@ -39,13 +39,13 @@
     "pre-commit": "npm run lint && npm run build && git add lib && npm run gulp -- pre-commit"
   },
   "dependencies": {
-    "@babel/runtime": "^7.17.8",
+    "@babel/runtime": "^7.17.9",
     "@hapi/boom": "^9.1.4",
     "debug": "^4.3.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.8",
+    "@babel/core": "^7.17.9",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-proposal-export-default-from": "^7.16.7",
     "@babel/plugin-proposal-export-namespace-from": "^7.16.7",
