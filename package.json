@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/react-router-render",
-  "version": "2.0.305",
+  "version": "2.0.306",
   "description": "Sync/async isomorphic render of React apps with React Router",
   "keywords": [
     "React",
@@ -68,6 +68,6 @@
     "react-dom": "17.0.1",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
-    "rimraf": "^4.0.5"
+    "rimraf": "^4.0.7"
   }
 }
