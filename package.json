@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/react-router-render",
-  "version": "2.0.327",
+  "version": "2.0.328",
   "description": "Sync/async isomorphic render of React apps with React Router",
   "keywords": [
     "React",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.20.13",
-    "@hapi/boom": "^10.0.0",
+    "@hapi/boom": "^10.0.1",
     "debug": "^4.3.4"
   },
   "devDependencies": {
