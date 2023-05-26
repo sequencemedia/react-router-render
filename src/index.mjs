@@ -11,6 +11,10 @@ const log = debug('@sequencemedia/react-redux-render')
 
 log('`react-redux-render` is awake')
 
+/**
+ * @param {Object.<string, any>} data
+ * @returns A boom object
+ */
 const notFound = (data) => Boom.notFound('Routing exception', data)
 
 /**

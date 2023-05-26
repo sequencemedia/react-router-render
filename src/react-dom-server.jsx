@@ -1,7 +1,12 @@
+import debug from 'debug'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import Boom from '@hapi/boom'
 import { StaticRouter as Router } from 'react-router-dom/server'
+
+const log = debug('@sequencemedia/react-redux-render')
+
+log('`react-redux-render` is awake')
 
 /**
  * @param {Error} e
