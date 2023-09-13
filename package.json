@@ -54,7 +54,7 @@
     "react-dom": "18.2.0",
     "react-router": "6.14.2",
     "react-router-dom": "6.14.2",
-    "sinon": "^15.2.0",
+    "sinon": "^16.0.0",
     "sinon-chai": "^3.7.0"
   },
   "exports": {
