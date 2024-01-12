@@ -39,10 +39,10 @@
   "devDependencies": {
     "@babel/core": "^7.23.7",
     "@babel/eslint-parser": "^7.23.3",
-    "@babel/preset-env": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
     "@babel/preset-react": "^7.23.3",
     "@babel/register": "^7.23.7",
-    "@sequencemedia/hooks": "^1.0.471",
+    "@sequencemedia/hooks": "^1.0.472",
     "@sequencemedia/sinon-chai": "^0.0.6",
     "chai": "^5.0.0",
     "core-js": "^3.35.0",
