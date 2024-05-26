@@ -27,10 +27,10 @@
     "url": "git://github.com/sequencemedia/react-router-render.git"
   },
   "scripts": {
-    "test": "NODE_ENV=test mocha test --recursive --verbose",
     "lint": "eslint . --ext .mjs,.cjs,.jsx",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "NODE_ENV=test mocha test --recursive --verbose"
   },
   "dependencies": {
     "@hapi/boom": "^10.0.1",
