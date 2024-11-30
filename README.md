@@ -4,7 +4,7 @@ Render isomorphic _React_ apps and components in Node.
 
 - Using _React Router_
 
-_Compatible with React Router 5._
+_For React Router 7._
 
 An example implementation of the companion package `@sequencemedia/react-router-redux-render` can be found in [react-router-pagination-io](http://github.com/sequencemedia/react-router-pagination-io.git).
 

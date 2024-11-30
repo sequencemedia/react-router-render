@@ -1,8 +1,10 @@
 import debug from 'debug'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
+import {
+  StaticRouter as Router
+} from 'react-router'
 import Boom from '@hapi/boom'
-import { StaticRouter as Router } from 'react-router-dom/server'
 
 const log = debug('@sequencemedia/react-redux-render')
 
