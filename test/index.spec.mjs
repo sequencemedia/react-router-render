@@ -1,4 +1,7 @@
-import { use, expect } from 'chai'
+import {
+  use,
+  expect
+} from 'chai'
 import sinonChai from '@sequencemedia/sinon-chai'
 
 import {
@@ -50,8 +53,8 @@ describe('@sequencemedia/react-router-render', () => {
   })
 
   describe('`render()`', () => {
-    it('returns a Promise resolving to a string', async () => {
-      return expect(await render(routerProps, Routes))
+    it('returns a string', () => {
+      return expect(render(routerProps, Routes))
         .to.equal('<h1>Component</h1>')
     })
   })

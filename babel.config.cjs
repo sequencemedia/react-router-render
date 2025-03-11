@@ -12,5 +12,7 @@ module.exports = {
     ],
     '@babel/react'
   ],
-  ignore: [/node_modules\/(?!@sequencemedia\/react-router-render)/]
+  ignore: [
+    /node_modules\/(?!@sequencemedia\/react-router-render)/
+  ]
 }

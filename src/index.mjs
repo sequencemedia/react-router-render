@@ -1,3 +1,8 @@
+/**
+ *  @typedef {ReactRouterRenderTypes.RouterPropsType} RouterPropsType
+ *  @typedef {ReactRouterRenderTypes.RoutesType} RoutesType
+ */
+
 import debug from 'debug'
 
 import Boom from '@hapi/boom'
@@ -12,17 +17,21 @@ const log = debug('@sequencemedia/react-redux-render')
 log('`react-redux-render` is awake')
 
 /**
- * @param {Object.<string, any>} data
- * @returns A boom object
+ *  @param {RouterPropsType} data
+ *  @returns A boom object
  */
-const notFound = (data) => Boom.notFound('Routing exception', data)
+function notFound (data) {
+  return (
+    Boom.notFound('Routing exception', data)
+  )
+}
 
 /**
- * @param {Object.<string, any>} routerProps
- * @param {Object.<string, any>} routes
- * @returns {string}
+ *  @param {RouterPropsType & { context?: Record<PropertyKey, unknown> }} routerProps
+ *  @param {RoutesType} routes
+ *  @returns {string}
  */
-export function renderToString ({ location, context = {}, ...router } = {}, routes = {}) {
+export function renderToString ({ location, context = {}, ...router }, routes) {
   const routerProps = { ...router, location, context }
   const string = getReactDOMServerRenderToString(routerProps, routes)
   if (string) return string
@@ -30,11 +39,11 @@ export function renderToString ({ location, context = {}, ...router } = {}, rout
 }
 
 /**
- * @param {Object.<string, any>} routerProps
- * @param {Object.<string, any>} routes
- * @returns {string}
+ *  @param {RouterPropsType & { context?: Record<PropertyKey, unknown> }} routerProps
+ *  @param {RoutesType} routes
+ *  @returns {string}
  */
-export function renderToStaticMarkup ({ location, context = {}, ...router } = {}, routes = {}) {
+export function renderToStaticMarkup ({ location, context = {}, ...router }, routes) {
   const routerProps = { ...router, location, context }
   const string = getReactDOMServerRenderToStaticMarkup(routerProps, routes)
   if (string) return string
@@ -42,11 +51,11 @@ export function renderToStaticMarkup ({ location, context = {}, ...router } = {}
 }
 
 /**
- * @param {Object.<string, any>} routerProps
- * @param {Object.<string, any>} routes
- * @returns {Promise<string>}
+ *  @param {RouterPropsType & { context?: Record<PropertyKey, unknown> }} routerProps
+ *  @param {RoutesType} routes
+ *  @returns {string}
  */
-export async function render ({ location, context = {}, ...router } = {}, routes = {}) {
+export function render ({ location, context = {}, ...router }, routes) {
   const routerProps = { ...router, location, context }
   const string = getReactDOMServerRenderToString(routerProps, routes)
   if (string) return string

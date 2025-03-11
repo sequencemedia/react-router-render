@@ -1,3 +1,16 @@
+/**
+ *  @typedef {ReactRouterRenderTypes.RouterPropsType} RouterPropsType
+ *  @typedef {ReactRouterRenderTypes.RoutesType} RoutesType
+ *
+ *  @typedef {{
+ *    props: RouterPropsType
+ *  }} RouterPropsException
+ *
+ *  @typedef {{
+ *    e: unknown
+ *  }} Exception
+ */
+
 import debug from 'debug'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
@@ -11,16 +24,20 @@ const log = debug('@sequencemedia/react-redux-render')
 log('`react-redux-render` is awake')
 
 /**
- * @param {Error} e
- * @param {{props: Object.<string, any>}} data
- * @returns A boom object
+ *  @param {Error} e
+ *  @param {RouterPropsException | Exception} data
+ *  @returns A boom object
  */
-const badImplementation = (e, data) => Boom.boomify(e, { statusCode: 500, message: 'Rendering exception', data })
+function badImplementation (e, data) {
+  return (
+    Boom.boomify(e, { statusCode: 500, message: 'Rendering exception', data })
+  )
+}
 
 /**
- * @param {Object.<string, any>} routerProps
- * @param {Object.<string, any>} routes
- * @returns {string}
+ *  @param {RouterPropsType} routerProps
+ *  @param {RoutesType} routes
+ *  @returns {string}
  */
 export function getReactDOMServerRenderToString (routerProps, routes) {
   try {
@@ -30,16 +47,15 @@ export function getReactDOMServerRenderToString (routerProps, routes) {
       </Router>
     )
   } catch (e) {
-    log(e)
-
-    throw badImplementation(e, routerProps)
+    if (e instanceof Error) throw badImplementation(e, { props: routerProps })
+    throw badImplementation(new Error('Exception'), { e })
   }
 }
 
 /**
- * @param {Object.<string, any>} routerProps
- * @param {Object.<string, any>} routes
- * @returns {string}
+ *  @param {RouterPropsType} routerProps
+ *  @param {RoutesType} routes
+ *  @returns {string}
  */
 export function getReactDOMServerRenderToStaticMarkup (routerProps, routes) {
   try {
@@ -49,8 +65,7 @@ export function getReactDOMServerRenderToStaticMarkup (routerProps, routes) {
       </Router>
     )
   } catch (e) {
-    log(e)
-
-    throw badImplementation(e, routerProps)
+    if (e instanceof Error) throw badImplementation(e, { props: routerProps })
+    throw badImplementation(new Error('Exception'), { e })
   }
 }
