@@ -9,10 +9,10 @@
     "jsx": "react",
     "paths": {
       "#react-router-render": [
-        "./src/index.mjs"
+        "src/index.mjs"
       ],
       "#react-router-render/react-dom-server": [
-        "./src/react-dom-server.cjs"
+        "src/react-dom-server.cjs"
       ]
     }
   },
