@@ -69,7 +69,12 @@
     "react-router": "^7.5.3",
     "sinon": "^20.0.0"
   },
+  "imports": {
+    "#react-router-render": "./src/index.mjs",
+    "#react-router-render/react-dom-server": "./src/react-dom-server.cjs"
+  },
   "exports": {
-    ".": "./src/index.mjs"
+    ".": "./src/index.mjs",
+    "./react-dom-server": "./src/react-dom-server.cjs"
   }
 }
