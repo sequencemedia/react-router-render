@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/react-router-render",
-  "version": "2.5.83",
+  "version": "2.5.84",
   "description": "Sync/async isomorphic render of React apps with React Router",
   "keywords": [
     "React",
